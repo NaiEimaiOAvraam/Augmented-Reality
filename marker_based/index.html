@@ -7,10 +7,22 @@
     
     <!-- particles system component -->
     <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+   
+    
+    <a-entity position="0 2.25 -15" particle-system="preset: snow"></a-entity>
     
     <!-- speech command component -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
     <script src="build/aframe-speech-command-component.js"></script> 
+   
+    
+   
+    <a-entity id="menu"
+              speech-command__start="command: start; type: attribute; attribute: preset; value: snow;"
+              speech-command__stop="command: stop; type: attribute; attribute: preset; value: default;">
+
+    
+    </a-entity>
     
 
     <body style="margin : 0px; overflow: hidden;">
@@ -22,6 +34,8 @@
   >
         <a-marker preset="hiro">
             <a-entity id="box" geometry="primitive: box; width: 0.2; depth: 0.2; height: 1.0" position="0 0 0" material="color: #4CC3D9"></a-entity>
+            <a-sphere position="1 1 1" radius="1.25" color="#EF2D5E"></a-sphere>
+            <a-cylinder position="2 2 2" radius="0.5" height="1.5" color: "#867979"></a-cylinder>
         </a-marker>
         <a-entity camera></a-entity>
         </a-scene>
